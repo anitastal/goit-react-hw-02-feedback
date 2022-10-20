@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import { Message } from 'components/Message/Message';
 
 export const Statistics = ({
   good,
@@ -7,7 +8,7 @@ export const Statistics = ({
   total,
   positivePercentage,
 }) => {
-  return (
+  return total ? (
     <ul>
       <li>Good {good}</li>
       <li>Neutral {neutral} </li>
@@ -15,6 +16,8 @@ export const Statistics = ({
       <li>Total {total}</li>
       <li>Positive Feedback {positivePercentage || 0} %</li>
     </ul>
+  ) : (
+    <Message />
   );
 };
 Statistics.propTypes = {

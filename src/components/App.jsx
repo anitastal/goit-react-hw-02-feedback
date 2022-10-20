@@ -2,6 +2,7 @@ import React from 'react';
 import { SectionTitle } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statictics';
+import { Message } from './Message/Message';
 
 const options = [
   { title: 'Good', name: 'good' },
