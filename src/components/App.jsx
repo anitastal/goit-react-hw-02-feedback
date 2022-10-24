@@ -3,12 +3,6 @@ import { SectionTitle } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statictics';
 
-const options = [
-  { title: 'Good', name: 'good' },
-  { title: 'Neutral', name: 'neutral' },
-  { title: 'Bad', name: 'bad' },
-];
-
 export class App extends React.Component {
   state = {
     good: 0,
@@ -48,7 +42,7 @@ export class App extends React.Component {
       >
         <SectionTitle title="Please leave your feedback">
           <FeedbackOptions
-            options={options}
+            optionsArr={this.state}
             onLeaveFeedback={this.handleChange}
           />
         </SectionTitle>
